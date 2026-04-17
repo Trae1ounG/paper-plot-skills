@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Plot From Image"
+  short_description: "Reproduce any paper figure from an uploaded image"
+  default_prompt: "Reproduce this paper figure for me"

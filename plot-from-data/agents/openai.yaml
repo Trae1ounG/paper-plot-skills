@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Plot From Data"
+  short_description: "Generate publication-quality plots from data using paper styles"
+  default_prompt: "Generate a plot for my data using the bar_grouped_hatch style"
