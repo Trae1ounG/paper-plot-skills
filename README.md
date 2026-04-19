@@ -40,21 +40,70 @@
 
 ---
 
-## `plot-from-image` 效果示例
+## 原图与复现总览
 
-`plot-from-image` 不依赖现成模板名。你只需要上传一张论文里的图，agent 会分析它的比例、字体、布局、配色和高亮逻辑，然后生成对应的 matplotlib 脚本。
+<table>
+<tr>
+<td align="center"><b>图名</b></td>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现图</b></td>
+</tr>
+<tr>
+<td><code>bar_memevolve</code></td>
+<td><img src="originals/bar_memevolve.png" width="260"></td>
+<td><img src="repro/bar_memevolve_repro.png" width="260"></td>
+</tr>
+<tr>
+<td><code>bar_spice</code></td>
+<td><img src="originals/bar_spice.png" width="260"></td>
+<td><img src="repro/bar_spice_repro.png" width="260"></td>
+</tr>
+<tr>
+<td><code>line_selfdistill_train</code></td>
+<td><img src="originals/line_selfdistill_train.png" width="260"></td>
+<td><img src="repro/line_selfdistill_train_repro.png" width="260"></td>
+</tr>
+<tr>
+<td><code>line_selfdistill_scale</code></td>
+<td><img src="originals/line_selfdistill_scale.png" width="260"></td>
+<td><img src="repro/line_selfdistill_scale_repro.png" width="260"></td>
+</tr>
+<tr>
+<td><code>line_aime</code></td>
+<td><img src="originals/line_aime.png" width="260"></td>
+<td><img src="repro/line_aime_repro.png" width="260"></td>
+</tr>
+<tr>
+<td><code>line_loss_inset</code></td>
+<td><img src="originals/line_loss_inset.png" width="260"></td>
+<td><img src="repro/line_loss_inset_repro.png" width="260"></td>
+</tr>
+<tr>
+<td><code>scatter_tsne</code></td>
+<td><img src="originals/scatter_tsne.png" width="260"></td>
+<td><img src="repro/scatter_tsne_repro.png" width="260"></td>
+</tr>
+<tr>
+<td><code>scatter_break</code></td>
+<td><img src="originals/scatter_break.png" width="260"></td>
+<td><img src="repro/scatter_break_repro.png" width="260"></td>
+</tr>
+<tr>
+<td><code>radar_dora</code></td>
+<td><img src="originals/radar_dora.png" width="260"></td>
+<td><img src="repro/radar_dora_repro.png" width="260"></td>
+</tr>
+<tr>
+<td><code>classwise_iou</code></td>
+<td><img src="originals/classwise_iou.png" width="260"></td>
+<td><img src="repro/classwise_iou_repro.png" width="260"></td>
+</tr>
+</table>
 
-下面这个例子，就是直接根据上传图片复现出来的：
+其中 `classwise_iou` 是直接走 `plot-from-image` 流程新增复现的案例：
 
-> 输入图片：`[originals/classwise_iou.png](originals/classwise_iou.png)`  
-> 复现脚本：`[plot-from-image/scripts/classwise_iou_table.py](plot-from-image/scripts/classwise_iou_table.py)`
-
-
-|          |                          |
-| -------- | ------------------------ |
-| **上传原图** | **plot-from-image 复现结果** |
-|          |                          |
-
+> 输入图片：[`originals/classwise_iou.png`](originals/classwise_iou.png)  
+> 复现脚本：[`plot-from-image/scripts/classwise_iou_table.py`](plot-from-image/scripts/classwise_iou_table.py)
 
 ---
 
@@ -68,13 +117,15 @@
 
 > **来源**：MemEvolve: Meta-Evolution of Agent Memory Systems  
 > serif 字体，配对柱（baseline vs method），箭头标注增益，Y 轴各子图独立  
-> 参数文档：`[plot-from-data/references/bar_paired_delta.md](plot-from-data/references/bar_paired_delta.md)` · 脚本：`[plot-from-data/scripts/bar_memevolve.py](plot-from-data/scripts/bar_memevolve.py)`
+> 参数文档：[`plot-from-data/references/bar_paired_delta.md`](plot-from-data/references/bar_paired_delta.md) · 脚本：[`plot-from-data/scripts/bar_memevolve.py`](plot-from-data/scripts/bar_memevolve.py)
 
-
-|        |        |
-| ------ | ------ |
-| **原图** | **复现** |
-|        |        |
+<table><tr>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现</b></td>
+</tr><tr>
+<td><img src="originals/bar_memevolve.png" width="320"></td>
+<td><img src="repro/bar_memevolve_repro.png" width="320"></td>
+</tr></table>
 
 
 ---
@@ -83,13 +134,15 @@
 
 > **来源**：SPICE: Self-Play In Corpus Environments  
 > LaTeX serif，分组柱 + 主方法白色斜线填充，柱顶数值（最优加粗），开口 L 形 spine  
-> 参数文档：`[plot-from-data/references/bar_grouped_hatch.md](plot-from-data/references/bar_grouped_hatch.md)` · 脚本：`[plot-from-data/scripts/bar_spice.py](plot-from-data/scripts/bar_spice.py)`
+> 参数文档：[`plot-from-data/references/bar_grouped_hatch.md`](plot-from-data/references/bar_grouped_hatch.md) · 脚本：[`plot-from-data/scripts/bar_spice.py`](plot-from-data/scripts/bar_spice.py)
 
-
-|        |        |
-| ------ | ------ |
-| **原图** | **复现** |
-|        |        |
+<table><tr>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现</b></td>
+</tr><tr>
+<td><img src="originals/bar_spice.png" width="320"></td>
+<td><img src="repro/bar_spice_repro.png" width="320"></td>
+</tr></table>
 
 
 ---
@@ -100,13 +153,15 @@
 
 > **来源**：Reinforcement Learning via Self-Distillation  
 > LaTeX Computer Modern serif，EMA 平滑主线，浅色置信区间 `fill_between`，SDPO 加粗图例  
-> 参数文档：`[plot-from-data/references/line_confidence_band.md](plot-from-data/references/line_confidence_band.md)` · 脚本：`[plot-from-data/scripts/line_selfdistill.py](plot-from-data/scripts/line_selfdistill.py)`
+> 参数文档：[`plot-from-data/references/line_confidence_band.md`](plot-from-data/references/line_confidence_band.md) · 脚本：[`plot-from-data/scripts/line_selfdistill.py`](plot-from-data/scripts/line_selfdistill.py)
 
-
-|        |        |
-| ------ | ------ |
-| **原图** | **复现** |
-|        |        |
+<table><tr>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现</b></td>
+</tr><tr>
+<td><img src="originals/line_selfdistill_train.png" width="320"></td>
+<td><img src="repro/line_selfdistill_train_repro.png" width="320"></td>
+</tr></table>
 
 
 ---
@@ -115,13 +170,15 @@
 
 > **来源**：DAPO: An Open-Source LLM RL System at Scale  
 > sans-serif，四边框，朝外刻度，水平参考线（独立蓝色），两条垂直断点虚线（与曲线同色）  
-> 参数文档：`[plot-from-data/references/line_training_curve.md](plot-from-data/references/line_training_curve.md)` · 脚本：`[plot-from-data/scripts/line_aime.py](plot-from-data/scripts/line_aime.py)`
+> 参数文档：[`plot-from-data/references/line_training_curve.md`](plot-from-data/references/line_training_curve.md) · 脚本：[`plot-from-data/scripts/line_aime.py`](plot-from-data/scripts/line_aime.py)
 
-
-|        |        |
-| ------ | ------ |
-| **原图** | **复现** |
-|        |        |
+<table><tr>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现</b></td>
+</tr><tr>
+<td><img src="originals/line_aime.png" width="320"></td>
+<td><img src="repro/line_aime_repro.png" width="320"></td>
+</tr></table>
 
 
 ---
@@ -130,13 +187,15 @@
 
 > **来源**：SiameseNorm: Breaking the Barrier to Reconciling Pre/Post-Norm  
 > LaTeX serif，L 形 spine + 轴端箭头，虚线放大框，黑色虚线连接右侧独立 inset 子图  
-> 参数文档：`[plot-from-data/references/line_loss_with_inset.md](plot-from-data/references/line_loss_with_inset.md)` · 脚本：`[plot-from-data/scripts/line_loss_inset.py](plot-from-data/scripts/line_loss_inset.py)`
+> 参数文档：[`plot-from-data/references/line_loss_with_inset.md`](plot-from-data/references/line_loss_with_inset.md) · 脚本：[`plot-from-data/scripts/line_loss_inset.py`](plot-from-data/scripts/line_loss_inset.py)
 
-
-|        |        |
-| ------ | ------ |
-| **原图** | **复现** |
-|        |        |
+<table><tr>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现</b></td>
+</tr><tr>
+<td><img src="originals/line_loss_inset.png" width="320"></td>
+<td><img src="repro/line_loss_inset_repro.png" width="320"></td>
+</tr></table>
 
 
 ---
@@ -147,13 +206,15 @@
 
 > **来源**：MemGen: Weaving Generative Latent Memory for Self-Evolving Agents  
 > LaTeX serif，7 类聚类，圆角注释框（统一深灰边 + 聚类色底），浅灰点线网格，四边框  
-> 参数文档：`[plot-from-data/references/scatter_tsne_cluster.md](plot-from-data/references/scatter_tsne_cluster.md)` · 脚本：`[plot-from-data/scripts/scatter_tsne.py](plot-from-data/scripts/scatter_tsne.py)`
+> 参数文档：[`plot-from-data/references/scatter_tsne_cluster.md`](plot-from-data/references/scatter_tsne_cluster.md) · 脚本：[`plot-from-data/scripts/scatter_tsne.py`](plot-from-data/scripts/scatter_tsne.py)
 
-
-|        |        |
-| ------ | ------ |
-| **原图** | **复现** |
-|        |        |
+<table><tr>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现</b></td>
+</tr><tr>
+<td><img src="originals/scatter_tsne.png" width="320"></td>
+<td><img src="repro/scatter_tsne_repro.png" width="320"></td>
+</tr></table>
 
 
 ---
@@ -162,13 +223,15 @@
 
 > **来源**：Meta-Harness: End-to-End Optimization of Model Harnesses  
 > sans-serif 粗体标签，双面板折断 X 轴（0-50k | 115k/200k），多 marker（★ ○ △ ◆ × ○），折断符仅底边  
-> 参数文档：`[plot-from-data/references/scatter_broken_axis.md](plot-from-data/references/scatter_broken_axis.md)` · 脚本：`[plot-from-data/scripts/scatter_break.py](plot-from-data/scripts/scatter_break.py)`
+> 参数文档：[`plot-from-data/references/scatter_broken_axis.md`](plot-from-data/references/scatter_broken_axis.md) · 脚本：[`plot-from-data/scripts/scatter_break.py`](plot-from-data/scripts/scatter_break.py)
 
-
-|        |        |
-| ------ | ------ |
-| **原图** | **复现** |
-|        |        |
+<table><tr>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现</b></td>
+</tr><tr>
+<td><img src="originals/scatter_break.png" width="320"></td>
+<td><img src="repro/scatter_break_repro.png" width="320"></td>
+</tr></table>
 
 
 ---
@@ -179,13 +242,34 @@
 
 > **来源**：DoRA: Weight-Decomposed Low-Rank Adaptation  
 > sans-serif，正八边形虚线同心网格，DoRA 深绿粗线 vs LoRA 蓝色细线，数值标注白底，图例左上  
-> 参数文档：`[plot-from-data/references/radar_dual_series.md](plot-from-data/references/radar_dual_series.md)` · 脚本：`[plot-from-data/scripts/radar_dora.py](plot-from-data/scripts/radar_dora.py)`
+> 参数文档：[`plot-from-data/references/radar_dual_series.md`](plot-from-data/references/radar_dual_series.md) · 脚本：[`plot-from-data/scripts/radar_dora.py`](plot-from-data/scripts/radar_dora.py)
+
+<table><tr>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现</b></td>
+</tr><tr>
+<td><img src="originals/radar_dora.png" width="320"></td>
+<td><img src="repro/radar_dora_repro.png" width="320"></td>
+</tr></table>
 
 
-|        |        |
-| ------ | ------ |
-| **原图** | **复现** |
-|        |        |
+---
+
+### `plot-from-image` 示例
+
+#### `classwise_iou` — 类别级结果表
+
+> **来源**：用户上传论文截图  
+> 纯表格式布局，双行结果 + 强弱高亮底色，按图片比例与文字排布直接复现  
+> 输入图片：[`originals/classwise_iou.png`](originals/classwise_iou.png) · 脚本：[`plot-from-image/scripts/classwise_iou_table.py`](plot-from-image/scripts/classwise_iou_table.py)
+
+<table><tr>
+<td align="center"><b>原图</b></td>
+<td align="center"><b>复现</b></td>
+</tr><tr>
+<td><img src="originals/classwise_iou.png" width="320"></td>
+<td><img src="repro/classwise_iou_repro.png" width="320"></td>
+</tr></table>
 
 
 ## Star History
