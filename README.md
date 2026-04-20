@@ -259,7 +259,7 @@
 
 #### `classwise_iou` — 类别级结果表
 
-> **来源**：用户上传论文截图  
+> **来源**：用户上传论文截图 https://github.com/Trae1ounG/paper-plot-skills/issues/1 \
 > 纯表格式布局，双行结果 + 强弱高亮底色，按图片比例与文字排布直接复现  
 > 输入图片：[`originals/classwise_iou.png`](originals/classwise_iou.png) · 脚本：[`plot-from-image/scripts/classwise_iou_table.py`](plot-from-image/scripts/classwise_iou_table.py)
 
